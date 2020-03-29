@@ -14,7 +14,7 @@ library(extrafont) # custom fonts
 # Get Data
 
 ```{r}
-getSymbols("ICSA", src="FRED") # get ICSA data from FRED
+getSymbols("ICSA", src = "FRED") # get ICSA data from FRED
 ```
 
 # Convert from XTS to data frame
@@ -80,11 +80,6 @@ options(gganimate.dev_args = list(height = 4, width = 4*1.777778, units = 'in', 
 animate(plot = anim_plot, 
         renderer = gifski_renderer("visuals/ICSA_pandemic_spike.gif"),
         fps = 20, duration = 12, end_pause = 80)
-
-animate(plot = anim_plot,
-        renderer = av_renderer("visuals/ICSA_pandemic_spike.mp4"),
-        fps = 20, duration = 12)
-
 ```
 
 "Siri, show me what an outlier looks like.",
